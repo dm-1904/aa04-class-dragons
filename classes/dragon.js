@@ -1,5 +1,27 @@
-// Your code here 
+class Dragon {
+  constructor(name, color){
+    this.name = name
+    this.color = color
+  }
+  breathesFire(){
+    return `${this.name} breathes fire everywhere! BURN!!!!`
+  }
+  static getDragons(...num){
+    let arr = []
+    for(let el of num){
+      let dragonName = el['name']
+      arr.push(dragonName)
+    }
+    return arr 
+  }
+}
+// const puff = new Dragon("Puff", "green");
+// console.log(puff);
+// console.log(puff.breathesFire());
 
+const puff = new Dragon("Puff", "green");
+const toothless = new Dragon("Toothless", "black");
+console.log(Dragon.getDragons(puff, toothless));
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
