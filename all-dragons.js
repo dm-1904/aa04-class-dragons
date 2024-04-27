@@ -1,6 +1,15 @@
-// Your code here 
+const friendlyDragon = require('./classes/friendly-dragon')
+const evilDragon = require('./classes/evil-dragon')
+const Dragon = require('./classes/dragon')
 
+const smaug = new evilDragon('Smaug', 'black', ['take over your mountain kingdom', 'steal all your dwarven gold', 'burn down your floating village'], 'Dwarf King')
+const falkor = new friendlyDragon('Falkor', 'white', ['save Atreyu from the swamp', 'save Atreyu from the Nothing', 'scare the local bullies into a dumpster'], 'Bastian' )
 
+// evilDragon.getDragons(smaug)
+// friendlyDragon.getDragons(falkor)
+
+// const allDragons = ([friendlyDragon.getDragons(falkor), evilDragon.getDragons(smaug)])
+const allDragons = Dragon.getDragons(smaug, falkor) 
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
@@ -10,3 +19,5 @@ try {
 } catch {
   module.exports = null;
 }
+
+module.exports.allDragons = allDragons
